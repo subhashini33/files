@@ -51,7 +51,15 @@ for j in l1:
     if j != "\n":
         l3.append(j)
 print(f"l3 content is {l3}")
+
 # get the number of words
+word count=0
+for i in l1:
+    if i == " ":
+        word count+ = 1
+print(wordcount)
+        
+    
 
 # get the number of words in a list
 
