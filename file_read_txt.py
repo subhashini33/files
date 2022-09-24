@@ -53,14 +53,19 @@ for j in l1:
 print(f"l3 content is {l3}")
 
 # get the number of words
-word count=0
-for i in l1:
-    if i == " ":
-        word count+ = 1
-print(wordcount)
+newlist = []
+for items in l1:
+    # print(items.split(","))
+    newlist+= items.split(" ")
+print(newlist)
+print(len(newlist))
+        
+   
         
     
 
 # get the number of words in a list
+for k in newlist:
+    print(k)
 
 # craete a dict with word as key and no of occurences in the file as values
