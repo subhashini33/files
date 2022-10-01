@@ -61,7 +61,23 @@ print(newlist)
 print(len(newlist))
         
    
-        
+ # get number of unique words into set excluding special characters
+s1 = set()
+list2 = []
+for word in newlist:
+    word=word.lower()
+    if word != "—": 
+        for ch in "[@_!#$%^&*()<>?/\|}{~:],.":
+            word = word.replace(ch,"")
+            word = word.replace("\n","")
+        # s1.add(word)
+        list2.append(word)
+s1=set(list2) #to convert list to set
+print(s1)
+print(len(s1))
+
+print(list2)
+print(len(list2))
     
 
 # get the number of words in a list
@@ -69,3 +85,45 @@ for k in newlist:
     print(k)
 
 # craete a dict with word as key and no of occurences in the file as values
+d = {}
+for i in s1:
+    d[i]=list2.count(i)
+print(d)
+
+
+print(len(list2))
+print(sum(d.values()))
+    
+
+f.close()
+
+## using NLTK
+import nltk # nltk.word_tokenize
+from nltk import * # all
+from nltk import word_tokenize
+
+f = open("sample.txt", "r",encoding="utf8")
+
+raw = f.read()
+res = word_tokenize(raw)
+
+word_cnt = {}
+for word in res :
+    if word in word_cnt:
+        word_cnt[word] += 1
+    else:
+        word_cnt[word] = 1
+
+print(res)
+print(word_cnt)
+f.close()
+
+
+with open("sample.txt", "r",encoding="utf8") as f:
+    lines = f.readlines()
+    print(lines)
+
+
+from collections import Counter
+c = Counter(res)
+print(c)
