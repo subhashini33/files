@@ -45,11 +45,15 @@ def word_preprocess(word):
 
     return
 def get_words_preprocess(words):
-
-    return words
+    cleaned_words = []
+    for word in words:
+        x = word_preprocess(word)
+        if x:
+            cleaned_words.append(x)
+    return cleaned_words
 
 def get_word_count():
-    
+
     return count
 
 def get_file_paths(folder_path):
