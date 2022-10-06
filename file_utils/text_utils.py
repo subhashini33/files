@@ -36,13 +36,20 @@ def word_count_nltk(file_name):
     return len(l2)
 
 def word_preprocess(word):
+    """ Hello -->hello
+        python, -->python
+        (name) -->name
+        " " --> None
+    """
     # output should be cleaned word return None if you want to to remove the word
 
     return
 def get_words_preprocess(words):
+
     return words
 
 def get_word_count():
+    
     return count
 
 def get_file_paths(folder_path):
