@@ -9,5 +9,5 @@ with open("samples/sample.csv",encoding='utf8') as f:
     data = []
     for line in lines:
         data.append(line.split(","))
-    #print(data)
+    print(data)
     
