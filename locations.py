@@ -7,11 +7,11 @@ hourly_data = pd.DataFrame()
 
 for i,row in df.iterrows():
     print(row['latitude'])
-    url = f"https://api.open-meteo.com/v1/forecast?latitude={row['latitude']}&longitude={row['latitude']}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m"
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={row['latitude']}&longitude={row['longitude']}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m"
     print(row['city name'],url)
 
 
-    resp=requests.get(f"https://api.open-meteo.com/v1/forecast?latitude={row['latitude']}&longitude={row['latitude']}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
+    resp=requests.get(url)
     # print(resp)
     # df1=pd.DataFrame(resp)
     # print(df1)
